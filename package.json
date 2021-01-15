@@ -1,6 +1,6 @@
 {
   "name": "serialize",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Serialize form data into a query string, array, object, or JSON string.",
   "browser": "./dist/serialize.cjs.min.js",
   "module": "./dist/serialize.es.min.js",

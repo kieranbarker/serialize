@@ -1,4 +1,4 @@
-/*! Serialize v0.0.0 | (c) 2021 Kieran Barker | MIT License | https://github.com/kieranbarker/serialize.git */
+/*! Serialize v1.0.0 | (c) 2021 Kieran Barker | MIT License | https://github.com/kieranbarker/serialize.git */
 'use strict';
 
 Object.defineProperty(exports, '__esModule', { value: true });

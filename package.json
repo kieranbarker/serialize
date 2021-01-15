@@ -1,0 +1,29 @@
+{
+  "name": "serialize",
+  "version": "0.0.0",
+  "description": "Serialize form data into a query string, array, object, or JSON string.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kieranbarker/serialize.git"
+  },
+  "keywords": [
+    "serialize",
+    "class",
+    "es2015",
+    "es6"
+  ],
+  "author": "Kieran Barker <kieranbarker@outlook.com> (https://kbarker.dev/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kieranbarker/serialize/issues"
+  },
+  "homepage": "https://github.com/kieranbarker/serialize#readme",
+  "devDependencies": {
+    "rollup": "^2.36.1",
+    "rollup-plugin-terser": "^7.0.2"
+  }
+}

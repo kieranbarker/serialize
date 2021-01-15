@@ -53,7 +53,7 @@ define(['exports'], function (exports) { 'use strict';
      * @returns {String} The serialized form data
      */
     json () {
-      return JSON.stringify(this.object(), null, 2);
+      return JSON.stringify(this.object());
     }
 
   }

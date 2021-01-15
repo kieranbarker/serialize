@@ -24,6 +24,7 @@
     "url": "https://kbarker.dev"
   },
   "license": "MIT",
+  "private": false,
   "bugs": {
     "url": "https://github.com/kieranbarker/serialize/issues"
   },

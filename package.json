@@ -1,5 +1,5 @@
 {
-  "name": "serialize",
+  "name": "@kieranbarker/serialize",
   "version": "1.0.0",
   "description": "Serialize form data into a query string, array, object, or JSON string.",
   "browser": "./dist/serialize.cjs.min.js",

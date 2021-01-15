@@ -2,13 +2,15 @@
   "name": "serialize",
   "version": "0.0.0",
   "description": "Serialize form data into a query string, array, object, or JSON string.",
-  "main": "index.js",
+  "browser": "./dist/serialize.cjs.min.js",
+  "module": "./dist/serialize.es.min.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx rollup --config"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kieranbarker/serialize.git"
+    "url": "https://github.com/kieranbarker/serialize.git"
   },
   "keywords": [
     "serialize",
@@ -16,7 +18,11 @@
     "es2015",
     "es6"
   ],
-  "author": "Kieran Barker <kieranbarker@outlook.com> (https://kbarker.dev/)",
+  "author": {
+    "name": "Kieran Barker",
+    "email": "kieranbarker@outlook.com",
+    "url": "https://kbarker.dev"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/kieranbarker/serialize/issues"

@@ -1,4 +1,4 @@
-/*! Serialize v1.0.0 | (c) 2021 Kieran Barker | MIT License | https://github.com/kieranbarker/serialize.git */
+/*! Serialize v1.0.1 | (c) 2021 Kieran Barker | MIT License | https://github.com/kieranbarker/serialize.git */
 define(['exports'], function (exports) { 'use strict';
 
   class Serialize {
@@ -9,6 +9,10 @@ define(['exports'], function (exports) { 'use strict';
      * @returns {Serialize} A new Serialize instance
      */
     constructor (form) {
+      if (!(form instanceof HTMLFormElement)) {
+        throw new TypeError('Serialize expected an HTMLFormElement.');
+      }
+
       this.data = new FormData(form);
     }
 

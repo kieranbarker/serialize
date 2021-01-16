@@ -6,6 +6,10 @@ export default class Serialize {
    * @returns {Serialize} A new Serialize instance
    */
   constructor (form) {
+    if (!(form instanceof HTMLFormElement)) {
+      throw new TypeError('Serialize expected an HTMLFormElement.');
+    }
+
     this.data = new FormData(form);
   }
 

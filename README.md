@@ -62,13 +62,22 @@ requirejs(['https://cdn.jsdelivr.net/npm/@kieranbarker/serialize@1/dist/serializ
 
 To create a new Serialize instance, simply instantiate the class using the `new` operator.
 
-You pass in an [`HTMLFormElement`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement):
+You pass in an [`HTMLFormElement`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement).
+
+**NOTE: Each form field needs to have a `name` attribute.**
+
+I'm using the [`document.forms`](https://developer.mozilla.org/en-US/docs/Web/API/Document/forms) property throughout this documentation:
 
 ```js
 const serialize = new Serialize(document.forms[0]);
 ```
 
-**NOTE: Each form field needs to have a `name` attribute.**
+But you can select a form any way you like:
+
+```js
+const form = document.querySelector('form');
+const serialize = new Serialize(form);
+```
 
 ## Instance methods
 
@@ -78,15 +87,13 @@ Serialize all form data into a query string.
 
 **Parameters:** None.
 
-**Returns:** The serialized form data.
+**Returns:** {String} The serialized form data.
 
 ```js
-const form = document.querySelector('form');
-
-form.addEventListener('submit', function (event) {
+document.forms[0].addEventListener('submit', function (event) {
   event.preventDefault();
-  const queryString = new Serialize(this).string();
-  console.log(queryString);
+  const data = new Serialize(this).string();
+  console.log(data);
 });
 ```
 
@@ -96,15 +103,13 @@ Serialize all form data into an array.
 
 **Parameters:** None.
 
-**Returns:** The serialized form data.
+**Returns:** {Array} The serialized form data.
 
 ```js
-const form = document.querySelector('form');
-
-form.addEventListener('submit', function (event) {
+document.forms[0].addEventListener('submit', function (event) {
   event.preventDefault();
-  const arr = new Serialize(this).array();
-  console.log(arr);
+  const data = new Serialize(this).array();
+  console.log(data);
 });
 ```
 
@@ -114,16 +119,14 @@ Serialize all form data into an object.
 
 **Parameters:** None.
 
-**Returns:** The serialized form data.
+**Returns:** {Object} The serialized form data.
 
 
 ```js
-const form = document.querySelector('form');
-
-form.addEventListener('submit', function (event) {
+document.forms[0].addEventListener('submit', function (event) {
   event.preventDefault();
-  const obj = new Serialize(this).object();
-  console.log(obj);
+  const data = new Serialize(this).object();
+  console.log(data);
 });
 ```
 
@@ -133,15 +136,13 @@ Serialize all form data into a JSON string.
 
 **Parameters:** None.
 
-**Returns:** The serialized form data.
+**Returns:** {String} The serialized form data.
 
 
 ```js
-const form = document.querySelector('form');
-
-form.addEventListener('submit', function (event) {
+document.forms[0].addEventListener('submit', function (event) {
   event.preventDefault();
-  const json = new Serialize(this).json();
-  console.log(json);
+  const data = new Serialize(this).json();
+  console.log(data);
 });
 ```

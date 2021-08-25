@@ -40,13 +40,7 @@ export default class Serialize {
    * @returns {Object} The serialized form data
    */
   object () {
-    const pairs = {};
-  
-    for (const [name, value] of this.data) {
-      pairs[name] = value;
-    }
-  
-    return pairs;
+    return Object.fromEntries(this.data);
   }
 
   /**
